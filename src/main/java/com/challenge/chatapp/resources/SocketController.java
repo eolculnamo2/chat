@@ -12,7 +12,13 @@ public class SocketController {
   @MessageMapping("/send-msg")
   @SendTo("/topic/emit-msg")
   public Message greeting(Message message) throws Exception {
-    return new Message(message.getUsername(), message.getMessage());
+    Message msg = new Message(message.getUsername(), message.getMessage());
+
+    if (message.getAttachment() != null) {
+      System.out.println(message.getAttachment());
+    }
+
+    return msg;
   }
 
 }

@@ -3,6 +3,7 @@ package com.challenge.chatapp.dto;
 public class Message {
   private String username;
   private String message;
+  private byte[] attachment;
 
   public Message() {
   }
@@ -28,4 +29,11 @@ public class Message {
     this.message = message;
   }
 
+  public byte[] getAttachment() {
+    return attachment;
+  }
+
+  public void setAttachment(byte[] attachment) {
+    this.attachment = attachment;
+  }
 }
