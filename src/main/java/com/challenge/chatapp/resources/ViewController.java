@@ -8,6 +8,6 @@ public class ViewController {
 
   @GetMapping("/")
   public String home() {
-    return "../static/dist/index";
+    return "../ui/dist/index";
   }
 }
